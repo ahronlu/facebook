@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use("/", require("./router"));
+app.use("/api", require("./router"));
 
 const __dirname = path.resolve();
 
