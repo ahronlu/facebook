@@ -24,9 +24,7 @@ export default function Chat() {
   }, [appState.isChatOpen]);
 
   useEffect(() => {
-    socket.current = io(
-      process.env.BACKENDURL || "https://socialkof.herokuapp.com"
-    );
+    socket.current = io("/api");
 
     socket.current.on("chatFromServer", (message) => {
       setState((draft) => {
